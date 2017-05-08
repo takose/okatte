@@ -1,4 +1,4 @@
-Dir[File.join(File.expand_path(File.dirname(__FILE__)), 'lib', '**/*.rb')].each { |f| require f }
+require 'okatte'
 
 # potato = Potato.new(size: 'middle')
 # Action.cut(ingredient: potato, amount: 3)
