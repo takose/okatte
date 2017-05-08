@@ -1,3 +1,5 @@
+require "okatte/version"
+
 class Cooking
   def initialize(title:, ingredients:, kitchenware:)
     @title = title
