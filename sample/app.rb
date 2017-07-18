@@ -16,7 +16,7 @@ cooking = Cooking.new(
   ]
 )
 
-cooking.start!
+puts cooking.start!
 
 print '1.'
 Action.cut(ingredient: plain_bread, amount: 4)
