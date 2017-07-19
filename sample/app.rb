@@ -1,4 +1,4 @@
-require 'okatte'
+require './lib/okatte.rb'
 
 # potato = Potato.new(size: 'middle')
 # Action.cut(ingredient: potato, amount: 3)
@@ -16,13 +16,9 @@ cooking = Cooking.new(
   ]
 )
 
-cooking.start!
+cooking.actions << Action.cut(ingredient: plain_bread, amount: 4)
+cooking.actions << Action.mix(kitchenware: bowl, ingredients: [egg, milk, sugar])
+cooking.actions << Action.pickle(kitchenware: bowl, ingredients: [plain_bread])
+cooking.actions << Action.toast(ingredients: [plain_bread])
 
-print '1.'
-Action.cut(ingredient: plain_bread, amount: 4)
-print '2.'
-Action.mix(kitchenware: bowl, ingredients: [egg, milk, sugar])
-print '3.'
-Action.pickle(kitchenware: bowl, ingredients: [plain_bread])
-print '4.'
-Action.toast(ingredients: [plain_bread])
+puts cooking.start!
