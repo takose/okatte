@@ -1,0 +1,17 @@
+egg: &egg
+  name_ja: 卵
+  price:
+  term:
+  base_action: &base_action
+    - mix
+    - boil
+    - toast
+  state:
+  part:
+    all:
+      <<: *base_action
+    white:
+      - mix
+    yellow:
+      - mix
+      - pickle
